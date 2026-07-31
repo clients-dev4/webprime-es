@@ -73,9 +73,11 @@ a:hover {
 
 .highlight {
     color: var(--ink);
-    background: var(--primary-orange);
-    box-shadow: 0 0 0 3px var(--primary-orange);
-    border-radius: 2px;
+    background-image: linear-gradient(var(--primary-orange), var(--primary-orange));
+    background-repeat: no-repeat;
+    background-size: 100% 1.02em;
+    background-position: 0 0.1em;
+    padding: 0 0.16em;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 }
@@ -287,7 +289,7 @@ a:hover {
 .hero h1 {
     font-size: 52px;
     font-weight: 700;
-    line-height: 1.14;
+    line-height: 1.24;
     letter-spacing: -0.02em;
     margin-bottom: 20px;
     color: var(--text-title);
@@ -316,9 +318,11 @@ a:hover {
 
 .hero-highlight-text strong {
     color: var(--ink);
-    background: var(--pop-green);
-    box-shadow: 0 0 0 3px var(--pop-green);
-    border-radius: 2px;
+    background-image: linear-gradient(var(--pop-green), var(--pop-green));
+    background-repeat: no-repeat;
+    background-size: 100% 1.02em;
+    background-position: 0 0.1em;
+    padding: 0 0.16em;
     animation: none;
     animation-delay: 1.9s;
 }
