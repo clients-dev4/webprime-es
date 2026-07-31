@@ -14,47 +14,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .offer-detail-page { padding: 120px 0 60px; }
-        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-gray); margin-bottom: 30px; transition: color 0.3s; }
-        .back-link:hover { color: var(--primary-orange); }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-body); margin-bottom: 30px; transition: color 0.3s; }
+        .back-link:hover { color: var(--orange-ink); }
         .back-link svg { width: 20px; height: 20px; }
 
-        /* Header - Style React/Tailwind exact */
-        .offer-header-detail { background: linear-gradient(to bottom right, #22c55e, #10b981); border-radius: 24px; padding: 32px; margin-bottom: 24px; text-align: center; }
-        .offer-header-detail h1 { font-size: 30px; font-weight: 700; color: #fff; margin-bottom: 8px; }
-        .offer-header-detail .description { color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 16px; }
-        .offer-header-detail .price { font-size: 48px; font-weight: 700; color: #fff; margin-bottom: 24px; }
-        .offer-header-detail .price span { font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.8); }
-        .offer-header-detail .btn-cta { background: #fff; color: #1f2937; padding: 12px 24px; border-radius: 12px; font-weight: 600; font-size: 16px; display: inline-block; transition: all 0.3s; }
-        .offer-header-detail .btn-cta:hover { background: #f3f4f6; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .offer-header-detail { background: var(--pop-green); border: 3px solid var(--ink); border-radius: 16px; box-shadow: var(--shadow-lg); padding: 32px; margin-bottom: 24px; text-align: center; }
+        .offer-header-detail h1 { font-size: 32px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+        .offer-header-detail .description { color: rgba(0,0,0,0.72); font-size: 16px; margin-bottom: 16px; }
+        .offer-header-detail .price { font-size: 48px; font-weight: 700; color: var(--ink); margin-bottom: 24px; }
+        .offer-header-detail .price span { font-size: 20px; font-weight: 400; color: rgba(0,0,0,0.68); }
+        .offer-header-detail .btn-cta { background: var(--primary-orange); color: var(--ink); padding: 12px 24px; border: 3px solid var(--ink); border-radius: 10px; box-shadow: var(--shadow-sm); font-weight: 700; font-size: 16px; display: inline-block; transition: all 0.3s; }
+        .offer-header-detail .btn-cta:hover { background: var(--orange-press); transform: translate(2px, 2px); box-shadow: 0 0 0 var(--ink); }
 
-        /* Features - Style React/Tailwind exact */
-        .features-card { background: #1f2937; border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .features-card h2 { color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+        .features-card { background: var(--bg-card); border: 3px solid var(--border); border-radius: 14px; padding: 24px; margin-bottom: 24px; box-shadow: var(--shadow-md); }
+        .features-card h2 { color: var(--text-title); font-size: 18px; font-weight: 700; margin-bottom: 16px; }
         .features-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-        .features-list li { display: flex; align-items: flex-start; gap: 12px; color: #d1d5db; }
-        .features-list li .check-icon { width: 20px; height: 20px; background: rgba(34, 197, 94, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .features-list li .check-icon svg { width: 12px; height: 12px; color: #22c55e; }
+        .features-list li { display: flex; align-items: flex-start; gap: 12px; color: var(--text-body); }
+        .features-list li .check-icon { width: 20px; height: 20px; background: rgba(16, 58, 92, 0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .features-list li .check-icon svg { width: 12px; height: 12px; color: var(--blue); }
 
-        /* Option card - Style React/Tailwind exact */
-        .option-card { background: #1f2937; border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .option-card { background: var(--bg-card); border: 3px solid var(--border); border-radius: 14px; padding: 24px; margin-bottom: 24px; box-shadow: var(--shadow-md); }
         .option-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
-        .option-icon { width: 40px; height: 40px; background: rgba(34, 197, 94, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4ade80; }
-        .option-header h3 { color: #fff; font-size: 18px; flex: 1; }
+        .option-icon { width: 40px; height: 40px; background: rgba(16, 58, 92, 0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4ade80; }
+        .option-header h3 { color: var(--text-title); font-size: 18px; flex: 1; }
         .option-price { color: #4ade80; font-weight: 700; font-size: 18px; }
-        .option-card > p { color: #9ca3af; font-size: 14px; margin-bottom: 15px; }
+        .option-card > p { color: var(--text-body); font-size: 14px; margin-bottom: 15px; }
         .option-features { list-style: none; }
-        .option-features li { display: flex; align-items: center; gap: 10px; padding: 8px 0; color: #9ca3af; font-size: 14px; }
+        .option-features li { display: flex; align-items: center; gap: 10px; padding: 8px 0; color: var(--text-body); font-size: 14px; }
         .option-features li::before { content: ''; width: 6px; height: 6px; background: #4ade80; border-radius: 50%; }
 
-        .contact-box { text-align: center; color: var(--text-gray); font-size: 14px; }
-        .contact-box a { color: var(--primary-orange); }
+        .contact-box { text-align: center; color: var(--text-body); font-size: 14px; }
+        .contact-box a { color: var(--orange-ink); }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <a href="https://webprime-espana.es" class="logo">
-                <img src="../webprime.png" alt="WebPrime Logo">
+                <img src="../sitio_web.png" alt="WebPrime España">
             </a>
             <button class="menu-toggle" aria-label="Menu" id="menuToggle">
                 <span></span>
@@ -65,7 +62,6 @@
                 <ul>
                     <li><a href="https://webprime-espana.es#ofertas">Nuestros Planes</a></li>
                     <li><a href="https://webprime-espana.es#creacion-web">Creación Web</a></li>
-                    <li><a href="https://webprime-espana.es#application">Aplicación Móvil</a></li>
                 </ul>
             </nav>
         </div>
@@ -82,7 +78,7 @@
                 <h1>Web Reservas</h1>
                 <p class="description">WordPress + PHP + JS - Sistema de reservas</p>
                 <div class="price">490€</div>
-                <a href="https://wa.me/message/OGAVCDGC3Q4JC1" target="_blank" class="btn-cta" style="display: inline-flex; align-items: center; gap: 8px;">
+                <a href="https://wa.me/message/7FJ5FBRG7OJSB1" target="_blank" class="btn-cta" style="display: inline-flex; align-items: center; gap: 8px;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Contactar por WhatsApp
                 </a>
@@ -122,7 +118,7 @@
                 </ul>
             </div>
 
-            <p class="contact-box">¿Tienes preguntas? <a href="mailto:contact@webprime-espana.es">Contáctanos</a></p>
+            <p class="contact-box">¿Tienes preguntas? <a href="mailto:contact@webprime.fr">Contáctanos</a></p>
         </div>
     </section>
 
@@ -144,5 +140,23 @@
             });
         });
     </script>
+    <nav class="bottom-nav" aria-label="Navegación rápida">
+        <a href="https://webprime-espana.es">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Inicio</span>
+        </a>
+        <a href="https://webprime-espana.es#ofertas" class="active">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            <span>Planes</span>
+        </a>
+        <a href="https://webprime-espana.es#creacion-web">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>Cómo va</span>
+        </a>
+        <a href="https://wa.me/message/7FJ5FBRG7OJSB1" target="_blank" rel="noopener" class="bnav-wa">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>WhatsApp</span>
+        </a>
+    </nav>
 </body>
 </html>
