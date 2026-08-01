@@ -1638,6 +1638,14 @@ a:hover {
         padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
     }
 
+    body:has(.footer) {
+        padding-bottom: 0;
+    }
+
+    body:has(.footer) .footer {
+        padding-bottom: calc(30px + 96px + env(safe-area-inset-bottom, 0px));
+    }
+
     .whatsapp-float {
         display: none !important;
     }
